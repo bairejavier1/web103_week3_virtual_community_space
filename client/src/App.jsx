@@ -1,54 +1,22 @@
-import React from 'react'
-import { useRoutes, Link } from 'react-router-dom'
-import Locations from './pages/Locations'
-import LocationEvents from './pages/LocationEvents'
-import Events from './pages/Events'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import LocationPage from './pages/LocationPage'
+import AllEventsPage from './pages/AllEventsPage'
 
-const App = () => {
-  let element = useRoutes([
-    {
-      path: '/',
-      element: <Locations />
-    },
-    {
-      path: '/echolounge',
-      element: <LocationEvents index={1} />
-    },
-    {
-      path: '/houseofblues',
-      element: <LocationEvents index={2} />
-    },
-    {
-      path: '/pavilion',
-      element: <LocationEvents index={3} />
-    },
-    {
-      path: '/americanairlines',
-      element: <LocationEvents index={4} />
-    },
-    {
-      path: '/events',
-      element: <Events />
-    }
-  ])
-
+function App() {
   return (
-    <div className='app'>
+    <Router>
+      <Routes>
+        {/* Home page shows all venue cards */}
+        <Route path="/" element={<HomePage />} />
 
-      <header className='main-header'>
-        <h1>UnityGrid Plaza</h1>
+        {/* Location detail page — :id is the venue's ID from the database */}
+        <Route path="/location/:id" element={<LocationPage />} />
 
-        <div className='header-buttons'>
-          <Link to='/' role='button'>Home</Link>
-          <Link to='/events' role='button'>Events</Link>
-        </div>
-      </header>
-
-      <main>
-        {element}
-      </main>
-    </div>
+        {/* All events page — stretch feature */}
+        <Route path="/events" element={<AllEventsPage />} />
+      </Routes>
+    </Router>
   )
 }
 

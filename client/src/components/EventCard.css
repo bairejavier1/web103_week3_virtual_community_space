@@ -1,0 +1,76 @@
+/* Base event card */
+.event-card {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 1px solid #e94560;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.2);
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Past event overrides */
+.event-card.past {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  border-color: #444;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* Event title */
+.event-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.event-card-title.past {
+  color: #888;
+  text-decoration: line-through;
+}
+
+/* Event description */
+.event-card-desc {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Date line */
+.event-card-date {
+  color: #e94560;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+/* Venue name (shown on All Events page) */
+.event-card-venue {
+  color: #f5a623;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+/* Countdown badge */
+.event-card-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.event-card-badge.upcoming {
+  background: linear-gradient(90deg, #e94560, #f5a623);
+  color: #fff;
+}
+
+.event-card-badge.past {
+  background: #333;
+  color: #888;
+}
