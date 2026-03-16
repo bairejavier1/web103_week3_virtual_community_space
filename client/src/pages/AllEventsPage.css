@@ -1,84 +1,114 @@
-/* Page header banner */
+/* ── Page hero banner ── */
 .allevents-hero {
-  background: linear-gradient(135deg, #533483, #e94560);
-  padding: 40px 24px;
+  background: linear-gradient(135deg, #533483 0%, #e94560 100%);
+  padding: 52px 24px;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.allevents-hero::before {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  top: -80px;
+  right: -40px;
 }
 
 .allevents-hero h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 900;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  position: relative;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
 }
 
 .allevents-hero p {
-  opacity: 0.85;
+  opacity: 0.88;
   font-size: 1rem;
+  position: relative;
 }
 
-/* Main content container */
+/* ── Main content container ── */
 .allevents-container {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 0 24px 40px;
+  padding: 0 24px 60px;
 }
 
-/* Back button */
+/* ── Back button ── */
 .allevents-back-btn {
   background: transparent;
   border: 1px solid #e94560;
   color: #e94560;
   border-radius: 20px;
-  padding: 6px 16px;
+  padding: 7px 18px;
   font-size: 0.85rem;
-  margin-bottom: 24px;
-  transition: background 0.2s;
+  font-weight: 600;
+  margin-bottom: 28px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
 }
 
 .allevents-back-btn:hover {
-  background: rgba(233, 69, 96, 0.1);
+  background: #e94560;
+  color: #fff;
 }
 
-/* Venue filter dropdown row */
+/* ── Venue filter row ── */
 .allevents-filter {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 14px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
+  background: #13132a;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid #1e1e3f;
 }
 
 .allevents-filter label {
   color: #f5a623;
-  font-weight: bold;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 .allevents-filter select {
-  background: #1a1a2e;
+  background: #1c1c35;
   color: #fff;
   border: 1px solid #e94560;
   border-radius: 20px;
-  padding: 8px 16px;
-  font-size: 0.9rem;
+  padding: 8px 18px;
+  font-size: 0.88rem;
   outline: none;
   cursor: pointer;
+  transition: border-color 0.2s;
+  flex: 1;
+  min-width: 180px;
 }
 
 .allevents-filter select:focus {
   border-color: #f5a623;
 }
 
-/* Event count label */
+/* ── Event count label ── */
 .allevents-count {
   color: #555;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 
-/* Empty state */
+/* ── Empty state ── */
 .allevents-empty {
   color: #555;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
+  font-size: 1rem;
 }

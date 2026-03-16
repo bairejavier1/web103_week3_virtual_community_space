@@ -6,13 +6,31 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #0a0a0a, #1a1a2e);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d1a;
   min-height: 100vh;
   color: #fff;
+  line-height: 1.6;
 }
 
 button {
   cursor: pointer;
   font-family: inherit;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #e94560;
+  border-radius: 4px;
 }
